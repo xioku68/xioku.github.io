@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="对象的方法对象的方法数组对象的方法 .push(): 向数组末尾添加一个或多个元素，并返回新的长度。 .pop(): 移除数组最后一个元素并返回该元素的值。 .shift(): 移除数组的第一个元素并返回该元素的值，同时将数组长度减一。 .unshift(): 在数组的开头添加一个或多个元素，并返回新的长度。 .splice(): 从数组中添加或移除元素。 .slice(): 返回一个新的数组，包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/02/03/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="对象的方法对象的方法数组对象的方法 .push(): 向数组末尾添加一个或多个元素，并返回新的长度。 .pop(): 移除数组最后一个元素并返回该元素的值。 .shift(): 移除数组的第一个元素并返回该元素的值，同时将数组长度减一。 .unshift(): 在数组的开头添加一个或多个元素，并返回新的长度。 .splice(): 从数组中添加或移除元素。 .slice(): 返回一个新的数组，包">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-02-03T03:53:11.924Z">
+<meta property="article:modified_time" content="2023-12-11T16:16:54.818Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2024/02/03/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title> | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/03/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-02-03 11:53:11" itemprop="dateCreated datePublished" datetime="2024-02-03T11:53:11+08:00">2024-02-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-12-12 00:16:54" itemprop="dateModified" datetime="2023-12-12T00:16:54+08:00">2023-12-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="对象的方法"><a href="#对象的方法" class="headerlink" title="对象的方法"></a>对象的方法</h1><h2 id="对象的方法-1"><a href="#对象的方法-1" class="headerlink" title="对象的方法"></a>对象的方法</h2><h3 id="数组对象的方法"><a href="#数组对象的方法" class="headerlink" title="数组对象的方法"></a>数组对象的方法</h3><ul>
+<li><code>.push()</code>: 向数组末尾添加一个或多个元素，并返回新的长度。</li>
+<li><code>.pop()</code>: 移除数组最后一个元素并返回该元素的值。</li>
+<li><code>.shift()</code>: 移除数组的第一个元素并返回该元素的值，同时将数组长度减一。</li>
+<li><code>.unshift()</code>: 在数组的开头添加一个或多个元素，并返回新的长度。</li>
+<li><code>.splice()</code>: 从数组中添加或移除元素。</li>
+<li><code>.slice()</code>: 返回一个新的数组，包括从开始到结束（不含结束）部分的元素。</li>
+<li><code>.concat()</code>: 用于连接两个或多个数组。</li>
+<li><code>.sort()</code>: 用于对数组的元素进行排序。</li>
+<li><code>.reverse()</code>: 用于颠倒数组中元素的顺序。</li>
+<li><code>.indexOf()</code>: 返回数组中某个元素第一次出现的索引。</li>
+<li><code>.forEach()</code>: 对数组的每个元素执行一次提供的函数。</li>
+</ul>
+<h3 id="字符串对象方法"><a href="#字符串对象方法" class="headerlink" title="字符串对象方法"></a>字符串对象方法</h3><ul>
+<li><code>.length</code>: 返回字符串的长度。</li>
+<li><code>.charAt()</code>: 返回指定位置的字符。</li>
+<li><code>.charCodeAt()</code>: 返回给定索引处字符的 Unicode 值。</li>
+<li><code>.concat()</code>: 用于连接两个或多个字符串。</li>
+<li><code>.indexOf()</code>: 返回指定值在字符串中首次出现的位置。</li>
+<li><code>.lastIndexOf()</code>: 返回指定值在字符串中最后一次出现的位置。</li>
+<li><code>.slice()</code>: 提取字符串的一部分并返回新字符串。</li>
+<li><code>.substring()</code>: 返回位于两个指定下标之间的字符。</li>
+<li><code>.toUpperCase()</code>: 将字符串转换为大写字母。</li>
+<li><code>.toLowerCase()</code>: 将字符串转换为小写字母。</li>
+<li><code>.replace()</code>: 用一个字符串替换另一个字符串。</li>
+<li><code>.split()</code>: 将字符串分割成字符串数组。</li>
+<li><code>.trim()</code>: 去除字符串两端的空白字符。</li>
+</ul>
+<h3 id="数字对象的方法"><a href="#数字对象的方法" class="headerlink" title="数字对象的方法"></a>数字对象的方法</h3><ul>
+<li><code>Number.parseFloat()</code>: 将字符串解析为浮点数并返回。</li>
+<li><code>Number.parseInt()</code>: 将字符串解析为整数并返回。</li>
+<li><code>Number.isNaN()</code>: 判断一个值是否为 NaN。</li>
+<li><code>Number.isFinite()</code>: 判断一个值是否为有限数。</li>
+<li><code>Number.isInteger()</code>: 判断一个值是否为整数。</li>
+</ul>
+<h3 id="Date对象的方法"><a href="#Date对象的方法" class="headerlink" title="Date对象的方法"></a>Date对象的方法</h3><ul>
+<li><code>getDate()</code>: 获取一个月中的某一天（1 到 31）。</li>
+<li><code>getDay()</code>: 获取星期几（0 表示星期日，1 表示星期一，以此类推）。</li>
+<li><code>getMonth()</code>: 获取月份（0 表示一月，11 表示十二月）。</li>
+<li><code>getFullYear()</code>: 获取年份（四位数）。</li>
+<li><code>getHours()</code>: 获取小时（0 到 23）。</li>
+<li><code>getMinutes()</code>: 获取分钟（0 到 59）。</li>
+<li><code>getSeconds()</code>: 获取秒数（0 到 59）。</li>
+<li><code>getMilliseconds()</code>: 获取毫秒（0 到 999）。</li>
+<li><code>getTime()</code>: 获取从 1970 年 1 月 1 日至今的毫秒数。</li>
+<li><code>toString()</code>: 返回日期的字符串表示。</li>
+</ul>
+<h3 id="RegExp-对象方法"><a href="#RegExp-对象方法" class="headerlink" title="RegExp 对象方法"></a>RegExp 对象方法</h3><ul>
+<li><code>test()</code>: 测试字符串是否匹配正则表达式，并返回 true 或 false。</li>
+<li><code>exec()</code>: 在字符串中执行正则表达式搜索，返回包含匹配内容的数组或 null。</li>
+<li><code>compile()</code>: 编译正则表达式，用于在多次执行中重复使用该正则表达式。</li>
+</ul>
+<h3 id="Function-对象方法"><a href="#Function-对象方法" class="headerlink" title="Function 对象方法"></a>Function 对象方法</h3><ul>
+<li><code>apply()</code>: 调用函数并指定 this 值和参数，参数以数组形式传入。</li>
+<li><code>call()</code>: 调用函数并指定 this 值和参数，参数以参数列表形式传入。</li>
+<li><code>bind()</code>: 创建一个新函数，其中 this 值由指定的对象提供。</li>
+</ul>
+<h3 id="Math-对象方法"><a href="#Math-对象方法" class="headerlink" title="Math 对象方法"></a>Math 对象方法</h3><ul>
+<li><code>Math.abs()</code>: 返回一个数的绝对值。</li>
+<li><code>Math.round()</code>: 把一个数四舍五入为最接近的整数。</li>
+<li><code>Math.floor()</code>: 对一个数进行向下取整。</li>
+<li><code>Math.ceil()</code>: 对一个数进行向上取整。</li>
+<li><code>Math.max()</code>: 返回一组数中的最大值。</li>
+<li><code>Math.min()</code>: 返回一组数中的最小值。</li>
+<li><code>Math.pow()</code>: 返回一个数的指定次幂。</li>
+<li><code>Math.sqrt()</code>: 返回一个数的平方根。</li>
+<li><code>Math.random()</code>: 返回一个大于等于 0 小于 1 的随机数。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/02/03/JS%E8%BF%9B%E9%98%B6/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">对象的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95-1"><span class="nav-number">1.1.</span> <span class="nav-text">对象的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.1.</span> <span class="nav-text">数组对象的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.2.</span> <span class="nav-text">字符串对象方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.3.</span> <span class="nav-text">数字对象的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.4.</span> <span class="nav-text">Date对象的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RegExp-%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.5.</span> <span class="nav-text">RegExp 对象方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function-%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.6.</span> <span class="nav-text">Function 对象方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Math-%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.7.</span> <span class="nav-text">Math 对象方法</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
