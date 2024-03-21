@@ -52,7 +52,7 @@
 2.2 字在寄存器中的存储
     8086一个字16位
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/2.1.png" alt="avatar"></p>
+<p><img src="/img_ass/2.1.png"></p>
 <pre><code>2.3 几条汇编指令
     1.汇编指令不区分大小写 
     2.几条汇编指令
@@ -153,7 +153,7 @@
 </code></pre>
 <h1 id="第三章-寄存器（内存访问）-1"><a href="#第三章-寄存器（内存访问）-1" class="headerlink" title="第三章 寄存器（内存访问）"></a>第三章 寄存器（内存访问）</h1><pre><code>3.1 内存中字的存储
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/3.1.png" alt="avatar"></p>
+<p><img src="/img_ass/3.1.png"></p>
 <pre><code>    1.任何两个地址连续的内存单元，N号单元和N+1号单元，可以将他们看成两个存储单元
         也可以看成一个地址为N的字单元中的高位字节单元和低位字节单元
     2.注意：在内存的表示中，从高到低，是从0号单元开始，然后逐渐变大，
@@ -521,7 +521,7 @@
 7.2 关于ASCII码
     一种编码方案，在计算机系统中通常被采用，8位
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/ASCII.png" alt="avatar"></p>
+<p><img src="/img_ass/ASCII.png"></p>
 <pre><code>7.3 以字符形式给出的数据
     1.在汇编程序中，可以使用&#39;×××&#39;的方式指明数据是以字符的形式给出的
     2.编译器会将它们转化为相应的ASCII码
@@ -709,7 +709,7 @@
             mov ax,cs:[bx+si+8]
 8.4 寻址方式
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/8.1.png" alt="avatar"></p>
+<p><img src="/img_ass/8.1.png"></p>
 <pre><code>8.5 指令要处理的数据有多长？
     1.8086CPU的指令，可以处理两种尺寸的数据，byte和word
         所以在机器指令中要指明，指令进行的是字操作还是字节操作
@@ -986,7 +986,7 @@ flag寄存器是按位起作用的，也就是说，它的每一位都有专门�
         而0、2、4、6、7、8、9、10、11位共9位都具有特殊的含义
     2.示意图
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/11.1.png" alt="avatar"></p>
+<p><img src="/img_ass/11.1.png"></p>
 <pre><code>11.1 ZF标志
     1.flag的第6位是ZF，零标志位。
         它记录相关指令执行后，
@@ -1029,7 +1029,7 @@ flag寄存器是按位起作用的，也就是说，它的每一位都有专门�
         8086CPU就用flag的cf为来记录这个进位值，借位也一样
     3.在debug中的显示
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/11.2.png" alt="avatar"></p>
+<p><img src="/img_ass/11.2.png"></p>
 <pre><code>    4.无符号的时候产生的结果
 11.5 OF标志
     flag中的第11位
@@ -1078,7 +1078,7 @@ flag寄存器是按位起作用的，也就是说，它的每一位都有专门�
         of=0    ;结果没有溢出
     7.根据flag，判断cmp指令的结果（无符号数）
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/11.3.png" alt="avatar"></p>
+<p><img src="/img_ass/11.3.png"></p>
 <pre><code>    8.cmp既可以对无符号数进行比较，也可以对有符号数进行比较
         cmp 操作数1,操作数2   ;操作数1、操作数2都是有符号数
         1.of=0，说明没有溢出，逻辑上真正结果的正负=实际结果的正负
@@ -1206,13 +1206,13 @@ flag寄存器是按位起作用的，也就是说，它的每一位都有专门�
       此程序会产生溢出
       运行之后，会显示
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/12.1.png" alt="avatar"></p>
+<p><img src="/img_ass/12.1.png"></p>
 <pre><code>12.7 编程处理0号中断
     现在重新编写一个0号中断处理程序，它的功能是在屏幕中间显示“Welcome to here!”的广告词，然后返回到操作系统
     把中断处理程序放到安全空间中
     中断程序的框架
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/12.2.png" alt="avatar"></p>
+<p><img src="/img_ass/12.2.png"></p>
 <pre><code>12.8 安装
     计算中断程序的长度：offset 标号1-offset 标号2
     在代码段中存放数据        
@@ -1222,7 +1222,7 @@ flag寄存器是按位起作用的，也就是说，它的每一位都有专门�
     如果检测到标志寄存器的tf位为1，则产生单步中断，引发中断过程
 12.12 响应中断的特殊情况
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/12.3.png" alt="avatar"><br><img src="C:/Users/xioku/Desktop/img_ass/12.4.png" alt="avatar"></p>
+<p><img src="/img_ass/12.3.png"><br><img src="C:/Users/xioku/Desktop/img_ass/12.4.png" alt="avatar"></p>
 <h1 id="第十三章-int指令-1"><a href="#第十三章-int指令-1" class="headerlink" title="第十三章 int指令"></a>第十三章 int指令</h1><pre><code>13.1 int指令
     1.int格式：int n  ;n为中断类型码
         它的功能是引发中断过程
@@ -1417,7 +1417,7 @@ flag寄存器是按位起作用的，也就是说，它的每一位都有专门�
         所以在BIOS键盘缓冲区中，一个键盘输入用一个字单元存放，高字节存放扫描码，低字节存放字符码
     5.0040:17单元存储键盘状态字节，该字节记录了控制键和切换键的状态。键盘状态字节各位记录的信息如下：
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/15.1.png" alt="avatar"></p>
+<p><img src="/img_ass/15.1.png"></p>
 <pre><code>15.4 编写int9中断例程,并安装
     梳理键盘输入的处理过程
         1.键盘产生扫描码
@@ -1580,14 +1580,14 @@ flag寄存器是按位起作用的，也就是说，它的每一位都有专门�
         BIOS 提供的访问磁盘的中断例程为int 13h 。
       如下，读取0面0道1扇区的内容到0:200： 
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/17.1.png" alt="avatar"></p>
+<p><img src="/img_ass/17.1.png"></p>
 <pre><code>        返回参数：
             操作成功：（ah）=0，（al）=读入的扇区数
             操作失败：（ah）=出错代码
       将0:200中的内容写入0面0道1扇区示例
         返回参数：
 </code></pre>
-<p><img src="C:/Users/xioku/Desktop/img_ass/17.2.png" alt="avatar"></p>
+<p><img src="/img_ass/17.2.png"></p>
 <pre><code>            操作成功： (ah)=0，(al)=写入的扇区数
             操作失败： (ah)=出错代码
     5.注意：使用int 13h 中断例程对软盘进行读写。直接向磁盘扇区写入数据是很危险的，
